@@ -11,7 +11,7 @@ controla tu ordenador, programa lo que necesites y recuerda lo que importa.
 [![Windows](https://img.shields.io/badge/Windows-10%2B%20(64--bit)-0078d4)](../../releases/latest)
 [![Descargar](https://img.shields.io/badge/descargar-Atlas.exe-22c55e)](../../releases/latest)
 
-[Descargar](../../releases/latest) · [Instalación](#instalación) · [Qué sabe hacer](#qué-sabe-hacer) · [Cómo funciona](#cómo-funciona-por-dentro)
+[Descargar](../../releases/latest) · [Instalación](#instalación) · [Qué sabe hacer](#qué-sabe-hacer) · [Qué se siente](#lo-más-cerca-que-vas-a-estar-de-una-ia-de-película)
 
 </div>
 
@@ -201,21 +201,49 @@ Windows 10 o superior (64 bits) · ~3 GB de disco · conexión a internet · mic
 
 ---
 
-## Cómo funciona por dentro
+## Lo más cerca que vas a estar de una IA de película
 
-ATLAS no es un programa, son varios trabajando juntos:
+Las asistentes del cine nunca fueron una caja de texto. Estaban ahí, les hablabas
+en voz alta, te contestaban, y seguían trabajando mientras tú te ocupabas de otra
+cosa. Eso es lo que se intentó construir aquí.
+
+**La llamas y te contesta.** Con voz, en el momento, y puedes cortarla a media
+frase como harías con cualquiera.
+
+**Se ocupa de tu gente.** Lee tus mensajes, contesta, descuelga el teléfono. Te
+cuenta lo que importa y se calla lo que no.
+
+**Trabaja sola.** Le dices *qué* quieres, no *cómo*. Abre el navegador, escribe el
+código, arma el documento, y se corrige si algo le sale mal.
+
+**Se acuerda.** De lo que le contaste ayer y de lo que aprendió hace un mes.
+
+**Y sigue ahí cuando te vas.** Le escribes desde el móvil y, cuando vuelves, el
+trabajo está hecho.
+
+Todo dentro de tu ordenador. Nada de esto pasa por un servidor de nadie.
+
+<details>
+<summary><b>Para quien quiera mirar debajo del capó</b></summary>
+
+<br>
+
+ATLAS no es un programa: son varios trabajando juntos, cada uno en lo suyo.
 
 ```
-Interfaz de escritorio        PyQt6, con la ventana dibujada en HTML/JS
-Bucle conversacional          reparte cada turno entre los agentes
-Agente de sistema             ejecuta, programa y corrige
-Navegador                     Playwright, con su propio buscador
-Módulo de WhatsApp            servidor en Go (whatsmeow) + agente propio
-Voz                           síntesis en streaming y escucha con detector de voz
-Memoria                       bóveda de notas enlazadas + córtex de recuperación
+Interfaz de escritorio    PyQt6, con la ventana dibujada en HTML/JS
+Bucle conversacional      reparte cada turno entre los agentes
+Agente de sistema         ejecuta, programa y corrige
+Navegador                 Playwright, con su propio buscador
+Módulo de WhatsApp        servidor en Go (whatsmeow) + agente propio
+Voz                       síntesis en streaming y escucha con detector de voz
+Memoria                   bóveda de notas enlazadas + córtex de recuperación
 ```
 
-Todo corre en tu máquina. Lo único que sale de tu ordenador son las peticiones a los modelos de IA, con tus propias claves.
+Lo único que sale de tu ordenador son las peticiones a los modelos de IA, con tus
+propias claves.
+
+</details>
 
 ---
 
