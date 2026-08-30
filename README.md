@@ -11,7 +11,7 @@ controla tu ordenador, programa lo que necesites y recuerda lo que importa.
 [![Windows](https://img.shields.io/badge/Windows-10%2B%20(64--bit)-0078d4)](../../releases/latest)
 [![Descargar](https://img.shields.io/badge/descargar-Atlas.exe-22c55e)](../../releases/latest)
 
-[Descargar](../../releases/latest) · [Instalación](#instalación) · [Qué sabe hacer](#qué-sabe-hacer) · [Qué se siente](#lo-más-cerca-que-vas-a-estar-de-una-ia-de-película)
+[Descargar](../../releases/latest) · [Instalación](#instalación) · [Qué sabe hacer](#qué-sabe-hacer) · [Qué se siente](#diseñada-para-que-no-tengas-que-ir-a-buscarla)
 
 </div>
 
@@ -35,6 +35,15 @@ ATLAS no. **Vive en tu ordenador**, tiene tus archivos delante, tu WhatsApp cone
 Y cuando no estás en casa, sigue trabajando: **le escribes por WhatsApp desde el móvil y te devuelve el trabajo hecho.**
 
 ---
+
+## En el día a día
+
+- Estás en una reunión y te llaman por WhatsApp. ATLAS contesta, atiende la
+  llamada, y te deja el resumen listo para cuando salgas.
+- Necesitas un informe antes de una cita y no vas a pasar por el escritorio.
+  Se lo pides por WhatsApp desde el móvil; al volver, el archivo ya está.
+- Le señalas un fallo en un script. Lo localiza, lo corrige, y te explica qué
+  cambió y por qué.
 
 ## Lo que la hace distinta
 
@@ -68,7 +77,9 @@ ATLAS reparte el trabajo entre varios modelos según lo que cueste cada cosa. El
 | `memory_cortex` | Decidir qué recordar |
 | `whatsapp_contacts` | Chats y llamadas |
 
-Cada uno se cambia desde Ajustes, sin tocar código. **No pagas modelo de programador para decir "buenos días".**
+Cada uno se cambia desde Ajustes, sin tocar código — incluido el catálogo
+completo de NVIDIA NIM si añades su clave. **No pagas modelo de programador
+para decir "buenos días".**
 
 <!-- IMAGEN: captura de Ajustes, seccion Agentes y Proveedores
      Sube el fichero a `docs/img/ajustes-agentes.png` y quita este comentario
@@ -184,6 +195,8 @@ ATLAS usa modelos de IA que van por internet, así que necesitas claves propias.
 - `GOOGLE_API_KEY` — inteligencia, voz y visión — https://aistudio.google.com/apikey
 - `DEEPSEEK_API_KEY` — el agente que trabaja en tu ordenador — https://platform.deepseek.com
 - `BRAVE_API_KEY` — búsqueda web, opcional — https://brave.com/search/api
+- `NVIDIA_API_KEY` — opcional, desbloquea el catálogo NIM (más de cien
+  modelos) para asignar el que prefieras a cada rol — https://build.nvidia.com
 
 Pon también tu `USER_NAME` para que sepa cómo llamarte.
 
@@ -201,27 +214,23 @@ Windows 10 o superior (64 bits) · ~3 GB de disco · conexión a internet · mic
 
 ---
 
-## Lo más cerca que vas a estar de una IA de película
+## Diseñada para que no tengas que ir a buscarla
 
-Las asistentes del cine nunca fueron una caja de texto. Estaban ahí, les hablabas
-en voz alta, te contestaban, y seguían trabajando mientras tú te ocupabas de otra
-cosa. Eso es lo que se intentó construir aquí.
+La mayoría de los asistentes esperan a que tú los abras: escribes, esperas,
+lees. ATLAS funciona al revés — trabaja en segundo plano y solo aparece cuando
+de verdad tiene algo que resolver o que contarte.
 
-**La llamas y te contesta.** Con voz, en el momento, y puedes cortarla a media
-frase como harías con cualquiera.
+- **Contesta con voz, en el momento**, y se la puede interrumpir a media frase.
+- **Filtra lo que te llega.** Resuelve sola lo rutinario y solo te avisa de lo
+  que de verdad importa.
+- **Ejecuta tareas completas sin supervisión.** Decide los pasos, los sigue, y
+  se corrige si algo sale mal por el camino.
+- **Construye memoria entre sesiones**, así que no hay que repetirle el
+  contexto cada vez que se abre.
+- **Sigue disponible cuando tú no estás.** Se le escribe desde el móvil y el
+  trabajo aparece hecho al volver.
 
-**Se ocupa de tu gente.** Lee tus mensajes, contesta, descuelga el teléfono. Te
-cuenta lo que importa y se calla lo que no.
-
-**Trabaja sola.** Le dices *qué* quieres, no *cómo*. Abre el navegador, escribe el
-código, arma el documento, y se corrige si algo le sale mal.
-
-**Se acuerda.** De lo que le contaste ayer y de lo que aprendió hace un mes.
-
-**Y sigue ahí cuando te vas.** Le escribes desde el móvil y, cuando vuelves, el
-trabajo está hecho.
-
-Todo dentro de tu ordenador. Nada de esto pasa por un servidor de nadie.
+Todo esto corre dentro de tu ordenador, sin depender de un servidor externo.
 
 <details>
 <summary><b>Para quien quiera mirar debajo del capó</b></summary>
