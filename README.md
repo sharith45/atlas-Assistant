@@ -184,7 +184,7 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
 
 **No necesitas Python ni instalar dependencias.** Es un programa, se descomprime y se abre.
 
-1. Descarga **`Atlas-v1.0.0-windows.zip`** desde [releases](../../releases/latest) y descomprímelo donde quieras.
+1. Descarga **`Atlas-v1.0.0-windows.rar`** desde [releases](../../releases/latest) y descomprímelo donde quieras.
 2. Abre el archivo **`.env`** con el Bloc de notas y pon tus claves.
 3. Ejecuta **`Atlas.exe`**.
 
