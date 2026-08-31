@@ -15,14 +15,9 @@ controla tu ordenador, programa lo que necesites y recuerda lo que importa.
 
 </div>
 
-<!-- IMAGEN: captura o vídeo corto de la ventana principal con el orbe hablando
-     Sube el fichero a `docs/img/atlas-hero.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/atlas-hero.png" alt="ATLAS en funcionamiento" width="820">
+  <img src="docs/img/pantalla_inicio.png" alt="ATLAS en la pantalla de Inicio" width="820">
 </p>
--->
 
 ---
 
@@ -81,14 +76,9 @@ Cada uno se cambia desde Ajustes, sin tocar código — incluido el catálogo
 completo de NVIDIA NIM si añades su clave. **No pagas modelo de programador
 para decir "buenos días".**
 
-<!-- IMAGEN: captura de Ajustes, seccion Agentes y Proveedores
-     Sube el fichero a `docs/img/ajustes-agentes.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/ajustes-agentes.png" alt="Un modelo distinto para cada rol" width="820">
+  <img src="docs/img/pantalla_ajustes.png" alt="Ajustes: perfil, modelos, voz y WhatsApp desde una sola pantalla" width="820">
 </p>
--->
 
 ### Recuerda de verdad
 
@@ -99,14 +89,9 @@ Dos memorias, como una persona:
 
 Todo en tu disco. Nada sube a ningún servidor.
 
-<!-- IMAGEN: captura de la pestaña Memoria con el grafo
-     Sube el fichero a `docs/img/memoria.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/memoria.png" alt="La memoria de Atlas" width="820">
+  <img src="docs/img/pantalla_memoria.png" alt="El grafo de la memoria de largo plazo, con cada nota enlazada a las demás" width="820">
 </p>
--->
 
 ---
 
@@ -135,31 +120,27 @@ Su voz es tuya: **eliges cuál** entre decenas en español, y ajustas velocidad 
 - Sabe cuándo apartarse: si estás tú escribiendo en ese chat, no se mete
 - Devuelve las llamadas perdidas
 
-<!-- IMAGEN: captura de la pestaña WhatsApp con chats y estado
-     Sube el fichero a `docs/img/whatsapp.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/whatsapp.png" alt="El módulo de WhatsApp" width="820">
+  <img src="docs/img/pantalla_whatsapp.png" alt="Vinculando WhatsApp: se escanea una vez y queda conectado" width="820">
 </p>
--->
 
 ### Maneja tu ordenador
 
 Crea y edita archivos, ejecuta comandos, instala cosas, programa lo que le pidas. Le dices qué quieres conseguir; ella decide los pasos y los va dando, corrigiéndose si algo falla.
 
-<!-- IMAGEN: captura de la terminal / una tarea ejecutándose
-     Sube el fichero a `docs/img/terminal.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/terminal.png" alt="Atlas trabajando en el ordenador" width="820">
+  <img src="docs/img/pantalla_terminal.png" width="270" alt="La consola: cada comando, con lo que decidió y por qué">
+  <img src="docs/img/pantalla_archivos.png" width="270" alt="Tus carpetas de proyecto, listas para activar">
+  <img src="docs/img/pantalla_tareas.png" width="270" alt="El progreso de cada tarea, hasta que se marca completada">
 </p>
--->
 
 ### Navega la web
 
 Abre un navegador de verdad, busca, entra en las páginas y saca lo que necesitas. No se inventa datos: los va a buscar.
+
+<p align="center">
+  <img src="docs/img/pantalla_chat.png" alt="Le pide el precio del dólar: Atlas navega, busca y contesta con el dato" width="820">
+</p>
 
 ### Documentos
 
@@ -169,14 +150,9 @@ Lee y crea Word, Excel, PowerPoint y PDF. Arrastra un archivo a la ventana y lo 
 
 ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones especializadas que se instalan y quedan disponibles al instante. Le dices que instale una y ella la descarga, la ordena y la registra sola.
 
-<!-- IMAGEN: captura de la pestaña Skills
-     Sube el fichero a `docs/img/skills.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/skills.png" alt="Habilidades instaladas" width="820">
+  <img src="docs/img/pantalla_skill.png" alt="Habilidades instaladas: cada una con su instrucción propia, editable" width="820">
 </p>
--->
 
 ---
 
@@ -184,7 +160,7 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
 
 **No necesitas Python ni instalar dependencias.** Es un programa, se descomprime y se abre.
 
-1. Descarga **`Atlas-v1.0.0-windows.rar`** desde [releases](../../releases/latest) y descomprímelo donde quieras.
+1. Descarga **`Atlas-v1.0.0-windows.zip`** desde [releases](../../releases/latest) y descomprímelo donde quieras.
 2. Abre el archivo **`.env`** con el Bloc de notas y pon tus claves.
 3. Ejecuta **`Atlas.exe`**.
 
@@ -219,6 +195,10 @@ Windows 10 o superior (64 bits) · ~3 GB de disco · conexión a internet · mic
 La mayoría de los asistentes esperan a que tú los abras: escribes, esperas,
 lees. ATLAS funciona al revés — trabaja en segundo plano y solo aparece cuando
 de verdad tiene algo que resolver o que contarte.
+
+<p align="center">
+  <img src="docs/img/pantalla_asistente.png" alt="Modo asistente: una ventana pequeña, siempre a mano, sin el resto de la interfaz" width="360">
+</p>
 
 - **Contesta con voz, en el momento**, y se la puede interrumpir a media frase.
 - **Filtra lo que te llega.** Resuelve sola lo rutinario y solo te avisa de lo
