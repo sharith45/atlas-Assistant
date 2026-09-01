@@ -349,6 +349,14 @@ Especializado en Inteligencia Artificial (machine learning y sistemas de agentes
 
 ---
 
+## Licencia
+
+Este programa es **gratis para descargar y usar**. El código fuente no es
+público — este repositorio solo distribuye el ejecutable compilado, no el
+proyecto en sí.
+
+---
+
 <div align="center">
 
 **ATLAS** — Tu asistente. Tu ordenador. Tu información.
