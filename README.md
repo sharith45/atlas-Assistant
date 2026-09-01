@@ -1,6 +1,6 @@
 <div align="center">
 
-# atlas-Assistant
+# Atlas-Assistant
 
 **Tu asistente personal. En tu ordenador. Sin depender de la nube de nadie.**
 
