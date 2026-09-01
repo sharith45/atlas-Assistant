@@ -84,7 +84,7 @@ completo de NVIDIA NIM si añades su clave. **No pagas modelo de programador
 para decir "buenos días".**
 
 <p align="center">
-  <img src="docs/img/pantalla_ajustes.png" alt="Ajustes: perfil, modelos, voz y WhatsApp desde una sola pantalla" width="820">
+  <img src="docs/img/ajustes_proveedores.gif" alt="Cambiando el modelo de un rol desde Ajustes, en vivo" width="820">
 </p>
 
 ### Recuerda de verdad
@@ -97,7 +97,10 @@ Dos memorias, como una persona:
 Todo en tu disco. Nada sube a ningún servidor.
 
 <p align="center">
-  <img src="docs/img/pantalla_memoria.png" alt="El grafo de la memoria de largo plazo, con cada nota enlazada a las demás" width="820">
+  <img src="docs/img/memoria_largo_plazo.gif" alt="El grafo de la memoria de largo plazo, con cada nota enlazada a las demás" width="820">
+</p>
+<p align="center">
+  <img src="docs/img/recordar_conversacion.gif" alt="Atlas mantiene el hilo de la conversación mientras hablas con ella" width="820">
 </p>
 
 ---
@@ -110,14 +113,9 @@ Le hablas y te contesta hablando, sin tocar el teclado. Detecta cuándo empiezas
 
 Su voz es tuya: **eliges cuál** entre decenas en español, y ajustas velocidad y tono. También cuánto silencio espera antes de dar tu turno por terminado.
 
-<!-- IMAGEN: captura de Ajustes, seccion La voz de Atlas
-     Sube el fichero a `docs/img/voz.png` y quita este comentario
-     (las dos lineas de <!-- y -->) para que se vea. -->
-<!--
 <p align="center">
-  <img src="docs/img/voz.png" alt="Ajustes de voz" width="820">
+  <img src="docs/img/transcripcion_voz_tiempo_real.gif" alt="Hablándole en vivo: el micrófono se abre, transcribe y contesta en tiempo real" width="820">
 </p>
--->
 
 ### WhatsApp completo
 
@@ -146,7 +144,7 @@ Crea y edita archivos, ejecuta comandos, instala cosas, programa lo que le pidas
 Abre un navegador de verdad, busca, entra en las páginas y saca lo que necesitas. No se inventa datos: los va a buscar.
 
 <p align="center">
-  <img src="docs/img/pantalla_chat.png" alt="Le pide el precio del dólar: Atlas navega, busca y contesta con el dato" width="820">
+  <img src="docs/img/consulta_en_directo.gif" alt="Le pide el precio del dólar: Atlas navega, busca y contesta con el dato, en vivo" width="820">
 </p>
 
 ### Documentos
