@@ -200,30 +200,61 @@ sirve la de uno en el otro.
 
 Para que esas empresas sepan que quien pide el plato eres **tú** (y no
 cualquier otra persona), te piden una **clave** — una fila larga de letras y
-números, como una contraseña — que identifica tu cuenta. Es **gratis**, la
-sacas tú mismo en un par de minutos, y **cada persona usa la suya**: no viene
-ninguna incluida dentro del programa, porque si viniera una sola, sería la mía,
-la usaría todo el mundo que lo descargara, y Google la bloquearía enseguida
-por abuso. Con tu propia clave, lo que uses es tuyo, gratis, y nadie te lo
-quita.
+números, como una contraseña — que identifica tu cuenta. La sacas tú mismo en
+un par de minutos, y **cada persona usa la suya**: no viene ninguna incluida
+dentro del programa, porque si viniera una sola, sería la mía, la usaría todo
+el mundo que lo descargara, y la bloquearían enseguida por abuso. Con tu
+propia clave, lo que uses es tuyo y nadie te lo quita.
+
+**No todos los proveedores cobran igual.** Google es gratis para lo que un
+uso normal necesita. DeepSeek es un servicio **de pago** — barato, pero de
+pago desde el principio, sin capa gratuita permanente —, así que necesitas
+cargarle un pequeño saldo a tu cuenta antes de que la clave funcione. Más
+abajo te digo exactamente cuánto y cómo.
 
 En resumen: una **API key** no es "código" ni algo técnico que tengas que
 entender por dentro — es tu **usuario y contraseña personal** para que Google
 y DeepSeek le den permiso a ATLAS de pensar, hablar y ver por ti.
 
-### Cómo conseguir tu clave de Google (obligatoria, gratis, ~2 minutos)
+### Cómo conseguir tu clave de Google (la única imprescindible, ~2 minutos)
+
+**Con esta sola ya arranca y puedes hablar con ella.** Es la única de las
+cuatro sin la que ATLAS no puede "pensar" — las demás cada una desbloquea
+algo puntual, esta es la base.
 
 1. Entra a **https://aistudio.google.com/apikey** e inicia sesión con tu cuenta de Gmail (la misma de siempre).
 2. Busca el botón para crear una clave nueva (dice algo como **"Create API key"** o **"Crear clave de API"**) y púlsalo.
 3. Aparece una fila larga de letras y números — es tu clave. Cópiala (el icono de copiar suele estar al lado).
 4. Abre el archivo **`.env`** de ATLAS con el Bloc de notas, busca la línea `GOOGLE_API_KEY=` y pega tu clave justo después del signo `=`, sin espacios ni comillas.
 
-### Cómo conseguir tu clave de DeepSeek (obligatoria, gratis)
+**Ojo con un matiz:** tal cual, sin nada más, la clave ya es gratis y ya
+funciona — pero Google la deja **limitada**: menos peticiones por minuto y sin
+acceso a sus modelos más potentes. Para el catálogo completo hay que activar
+la facturación de Google Cloud (agregar una tarjeta, la "cartera") — pero eso
+**cambia las reglas**: en el momento en que la activas, dejas la capa gratuita
+y pasas a pagar por lo que uses, ya no es "gratis con un candado de más".
+Para empezar y para el día a día no hace falta — la capa gratuita alcanza de
+sobra —, actívala solo si de verdad necesitas los modelos más potentes de
+Google y estás dispuesto a que te cobren por usarlos.
+
+### Cómo conseguir tu clave de DeepSeek (para el Agente que programa y maneja tu PC — **de pago**)
+
+**Esta sí cuesta dinero**, a diferencia de la de Google. No es un truco ni una
+suscripción escondida: DeepSeek no tiene capa gratuita permanente, así que
+para que la clave funcione necesitas cargar saldo en tu cuenta, como una
+tarjeta prepago. Es barata de verdad para lo que se usa — solo entra en juego
+cuando le pides a ATLAS que programe algo o maneje tu ordenador (ver la tabla
+de arriba), no en cada mensaje —, pero sí es de pago desde el primer uso.
 
 1. Entra a **https://platform.deepseek.com**, crea una cuenta (con correo o Google) e inicia sesión.
-2. En el menú busca la sección **"API keys"** y pulsa el botón para crear una nueva (algo como **"Create new key"**).
-3. Cópiala apenas te la muestre — **algunas plataformas solo la enseñan una vez**, así que si la cierras sin copiarla tendrás que crear otra.
-4. Pégala en el `.env`, después de `DEEPSEEK_API_KEY=`.
+2. Busca la sección de **saldo/facturación** (algo como **"Billing"** o **"Top up"**) y carga un monto pequeño — con 2 o 5 dólares alcanza para empezar.
+3. Ve a la sección **"API keys"** y pulsa el botón para crear una nueva (algo como **"Create new key"**).
+4. Cópiala apenas te la muestre — **algunas plataformas solo la enseñan una vez**, así que si la cierras sin copiarla tendrás que crear otra.
+5. Pégala en el `.env`, después de `DEEPSEEK_API_KEY=`.
+
+**Si no quieres pagar todavía, no pasa nada:** deja esa línea vacía. ATLAS
+arranca igual y conversa contigo con la clave de Google — solo se queda sin
+el Agente que toca tu ordenador hasta que la agregues.
 
 Las otras dos son **opcionales** — ATLAS funciona sin ellas, solo desbloquean
 cosas extra:
