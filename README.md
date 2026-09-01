@@ -7,11 +7,18 @@
 Habla contigo por voz, atiende tu WhatsApp — mensajes **y llamadas de teléfono** —,
 controla tu ordenador, programa lo que necesites y recuerda lo que importa.
 
+<br>
+
+## [![DESCARGAR ATLAS GRATIS PARA WINDOWS](https://img.shields.io/badge/⬇️_DESCARGAR_ATLAS-GRATIS_PARA_WINDOWS-22c55e?style=for-the-badge&logo=windows11&logoColor=white&labelColor=15803d)](../../releases/latest)
+
+**No hace falta saber programar. Se descomprime y se abre.**
+
+<br>
+
 [![Versión](https://img.shields.io/badge/versión-1.0.0-8b5cf6)](../../releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%2B%20(64--bit)-0078d4)](../../releases/latest)
-[![Descargar](https://img.shields.io/badge/descargar-Atlas.exe-22c55e)](../../releases/latest)
 
-[Descargar](../../releases/latest) · [Instalación](#instalación) · [Qué sabe hacer](#qué-sabe-hacer) · [Qué se siente](#diseñada-para-que-no-tengas-que-ir-a-buscarla)
+[Instalación](#instalación) · [Qué sabe hacer](#qué-sabe-hacer) · [Qué se siente](#diseñada-para-que-no-tengas-que-ir-a-buscarla)
 
 </div>
 
@@ -158,25 +165,76 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
 
 ## Instalación
 
+<div align="center">
+
+[![DESCARGAR ATLAS GRATIS PARA WINDOWS](https://img.shields.io/badge/⬇️_DESCARGAR_ATLAS-GRATIS_PARA_WINDOWS-22c55e?style=for-the-badge&logo=windows11&logoColor=white&labelColor=15803d)](../../releases/latest)
+
+</div>
+
 **No necesitas Python ni instalar dependencias.** Es un programa, se descomprime y se abre.
 
 1. Descarga **`Atlas-v1.0.0-windows.zip`** desde [releases](../../releases/latest) y descomprímelo donde quieras.
-2. Abre el archivo **`.env`** con el Bloc de notas y pon tus claves.
+2. Abre el archivo **`.env`** con el Bloc de notas y pon tus claves (lee abajo qué es esto si nunca lo has hecho).
 3. Ejecuta **`Atlas.exe`**.
 
-### Claves
+### ¿Qué es una "API" y por qué necesito una "clave"? (léelo si es la primera vez)
 
-ATLAS usa modelos de IA que van por internet, así que necesitas claves propias. Las básicas son gratuitas:
+No hace falta saber programar para entender esto — solo la idea, con un ejemplo:
 
-- `GOOGLE_API_KEY` — inteligencia, voz y visión — https://aistudio.google.com/apikey
-- `DEEPSEEK_API_KEY` — el agente que trabaja en tu ordenador — https://platform.deepseek.com
-- `BRAVE_API_KEY` — búsqueda web, opcional — https://brave.com/search/api
-- `NVIDIA_API_KEY` — opcional, desbloquea el catálogo NIM (más de cien
-  modelos) para asignar el que prefieras a cada rol — https://build.nvidia.com
+Imagina un restaurante. Tú no entras a la cocina a cocinar tu plato: se lo pides
+a un **mesero**, el mesero se lo dice al cocinero, y te trae el plato ya listo.
+Una **API** es exactamente eso — **la forma en que un programa le pide algo a
+otro programa, por internet.**
 
-Pon también tu `USER_NAME` para que sepa cómo llamarte.
+ATLAS no "piensa", ni "escucha", ni "habla" por sí sola: esas partes las hacen
+**Google, DeepSeek y NVIDIA** — empresas a las que en este mundo se les llama
+**"proveedores de IA"**, porque cada una es dueña de su propia inteligencia
+artificial y la ofrece por internet, como cada restaurante tiene su propia
+cocina y su propio menú. ATLAS no cocina nada: solo hace de mesero entre tú y
+esas cocinas — les lleva tu pregunta al restaurante que sepa responderla mejor,
+y te trae el plato ya hecho.
 
-**Las claves son tuyas.** ATLAS no incluye ninguna ni las comparte.
+Por eso hay más de una clave: cada "restaurante" (proveedor) te pide la suya,
+igual que cada restaurante de verdad te da su propia tarjeta de puntos — no
+sirve la de uno en el otro.
+
+Para que esas empresas sepan que quien pide el plato eres **tú** (y no
+cualquier otra persona), te piden una **clave** — una fila larga de letras y
+números, como una contraseña — que identifica tu cuenta. Es **gratis**, la
+sacas tú mismo en un par de minutos, y **cada persona usa la suya**: no viene
+ninguna incluida dentro del programa, porque si viniera una sola, sería la mía,
+la usaría todo el mundo que lo descargara, y Google la bloquearía enseguida
+por abuso. Con tu propia clave, lo que uses es tuyo, gratis, y nadie te lo
+quita.
+
+En resumen: una **API key** no es "código" ni algo técnico que tengas que
+entender por dentro — es tu **usuario y contraseña personal** para que Google
+y DeepSeek le den permiso a ATLAS de pensar, hablar y ver por ti.
+
+### Cómo conseguir tu clave de Google (obligatoria, gratis, ~2 minutos)
+
+1. Entra a **https://aistudio.google.com/apikey** e inicia sesión con tu cuenta de Gmail (la misma de siempre).
+2. Busca el botón para crear una clave nueva (dice algo como **"Create API key"** o **"Crear clave de API"**) y púlsalo.
+3. Aparece una fila larga de letras y números — es tu clave. Cópiala (el icono de copiar suele estar al lado).
+4. Abre el archivo **`.env`** de ATLAS con el Bloc de notas, busca la línea `GOOGLE_API_KEY=` y pega tu clave justo después del signo `=`, sin espacios ni comillas.
+
+### Cómo conseguir tu clave de DeepSeek (obligatoria, gratis)
+
+1. Entra a **https://platform.deepseek.com**, crea una cuenta (con correo o Google) e inicia sesión.
+2. En el menú busca la sección **"API keys"** y pulsa el botón para crear una nueva (algo como **"Create new key"**).
+3. Cópiala apenas te la muestre — **algunas plataformas solo la enseñan una vez**, así que si la cierras sin copiarla tendrás que crear otra.
+4. Pégala en el `.env`, después de `DEEPSEEK_API_KEY=`.
+
+Las otras dos son **opcionales** — ATLAS funciona sin ellas, solo desbloquean
+cosas extra:
+
+- `BRAVE_API_KEY` — búsqueda web más rápida — https://brave.com/search/api
+- `NVIDIA_API_KEY` — desbloquea el catálogo NIM (más de cien modelos) para
+  asignar el que prefieras a cada rol — https://build.nvidia.com
+
+Pon también tu `USER_NAME` (una línea más arriba en el `.env`) para que ATLAS sepa cómo llamarte.
+
+**Las claves son tuyas.** ATLAS no incluye ninguna ni las comparte con nadie — se quedan en tu `.env`, en tu propio ordenador.
 
 ### Al abrirlo, Windows te avisará
 
