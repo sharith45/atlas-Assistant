@@ -349,9 +349,14 @@ Especializado en Inteligencia Artificial (machine learning y sistemas de agentes
 
 ## Licencia
 
-Este programa es **gratis para descargar y usar**. El código fuente no es
-público — este repositorio solo distribuye el ejecutable compilado, no el
-proyecto en sí.
+Este programa es **gratis para descargar y usar**. El repositorio distribuye
+el ejecutable compilado, no el proyecto completo — el núcleo de ATLAS (la
+orquestación de agentes, el navegador, WhatsApp, la memoria) no es público.
+
+Sí quedan visibles, a modo de transparencia, dos partes puntuales:
+`prompts/` (las instrucciones que gobiernan cómo decide y se comporta cada
+agente) y `herramientas/` (los generadores de Word/Excel/PowerPoint/PDF).
+El resto del código sigue siendo privado.
 
 ---
 
