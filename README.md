@@ -343,7 +343,7 @@ Si encuentras un error, abre un [issue](../../issues) contando qué hacías, qu�
 
 Especializado en Inteligencia Artificial (machine learning y sistemas de agentes autónomos) y desarrollo backend.
 
-[github.com/sharith45](https://github.com/sharith45)
+[github.com/sharith45](https://github.com/sharith45) · [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:sharithmanjarrezpacheco@gmail.com)
 
 ---
 
