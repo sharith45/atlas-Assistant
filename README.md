@@ -163,26 +163,28 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
 
 ## Diagrama de Atlas
 
-Así se reparte cada mensaje entre las piezas de ATLAS, y por dónde pasa uno
-que llega por WhatsApp antes de convertirse en respuesta.
+Así se reparte cada mensaje entre las piezas de ATLAS, sea que llegue
+hablando frente al ordenador o escribiendo por WhatsApp.
 
 ```mermaid
 flowchart TD
-    E1["Le hablas o le escribes desde el ordenador"] --> CONV
-
-    CONV{{"Conversacional<br/>decide qué hace falta"}}
-    CONV -->|"moverse por la web"| NAV["Navegación Gráfica"]
-    CONV -->|"un dato de internet, ya"| BUS["Búsqueda Rápida"]
-    CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
-
-    W1["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
+    U1["Tú, hablando o escribiendo desde el ordenador"] --> CONV
+    U2["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
     W2 -->|"sí"| OIDO["Oído de Atlas<br/>voz → texto"]
     W2 -->|"no, ya es texto"| W3
     OIDO --> W3{"¿Quién es?"}
-    LLAM["Alguien te llama"] --> WAAG
-
+    LLAM["Alguien te llama por WhatsApp"] --> WAAG
     W3 -->|"tú mismo, tu propio chat"| CONV
-    W3 -->|"un contacto tuyo"| WAAG["Agente de Contactos<br/>criterio propio, aparte del Conversacional"]
+    W3 -->|"un contacto tuyo"| WAAG["Agente de Contactos<br/>WhatsApp, criterio propio"]
+
+    CONV{{"Conversacional<br/>el cerebro central"}}
+    CONV -->|"moverse por la web"| NAV["Navegación Gráfica"]
+    CONV -->|"un dato de internet, ya"| BUS["Búsqueda Rápida"]
+    CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
+    CONV <-->|"qué recordar, qué traer"| MEM["Memoria<br/>corto y largo plazo"]
+
+    SIS -.->|"usa"| SKI["Skills instaladas"]
+    SIS -.->|"usa"| MCP["Servidores MCP"]
 
     CONV --> SALIDA{"¿Se dice mejor hablado?"}
     WAAG --> SALIDA
