@@ -316,6 +316,43 @@ Voz                       síntesis en streaming y escucha con detector de voz
 Memoria                   bóveda de notas enlazadas + córtex de recuperación
 ```
 
+### Por dónde pasa cada cosa
+
+```mermaid
+flowchart TD
+    E1["Le hablas o le escribes desde el ordenador"] --> CONV
+
+    CONV{{"🧠 Conversacional<br/>decide qué hace falta"}}
+    CONV -->|"moverse por la web"| NAV["🌐 Navegación Gráfica"]
+    CONV -->|"un dato de internet, ya"| BUS["🔍 Búsqueda Rápida"]
+    CONV -->|"programar o tocar el PC"| SIS["⚙️ Agente de Sistema"]
+
+    W1["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
+    W2 -->|"sí"| OIDO["👂 Oído de Atlas<br/>voz → texto"]
+    W2 -->|"no, ya es texto"| W3
+    OIDO --> W3{"¿Quién es?"}
+    LLAM["📞 Alguien te llama"] --> WAAG
+
+    W3 -->|"tú mismo, tu propio chat"| CONV
+    W3 -->|"un contacto tuyo"| WAAG["🤖 Agente de Contactos<br/>criterio propio, aparte del Conversacional"]
+
+    CONV --> SALIDA{"¿Se dice mejor hablado?"}
+    WAAG --> SALIDA
+    SALIDA -->|"sí"| VOZ["🔊 Voz de Atlas<br/>texto → voz, en tiempo real"]
+    SALIDA -->|"no"| TXT["✍️ Respuesta escrita"]
+```
+
+Dos detalles que no se ven a simple vista:
+
+- **El chat "Tú"** (tu propio número, el que usas para hablarle a ella) **no
+  es un chat de contacto más**: comparte cerebro y memoria con el
+  Conversacional de siempre — el mismo que te atiende por voz o por el chat
+  de escritorio.
+- **Los chats de tus demás contactos, y las llamadas que recibes, van por un
+  Agente de Contactos aparte**, con su propio criterio — no el mismo con el
+  que hablas tú. Una llamada y un chat de esa misma persona sí comparten
+  ese criterio entre sí.
+
 Lo único que sale de tu ordenador son las peticiones a los modelos de IA, con tus
 propias claves.
 
