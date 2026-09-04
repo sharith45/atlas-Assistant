@@ -159,6 +159,16 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
   <img src="docs/img/pantalla_skill.png" alt="Habilidades instaladas: cada una con su instrucción propia, editable" width="820">
 </p>
 
+### Se conecta a herramientas externas (MCP)
+
+A veces lo que hace falta no es una instrucción nueva, sino un programa externo entero — simular una red en Cisco Packet Tracer, consultar una base de datos, lo que sea que hable **MCP (Model Context Protocol)**, el estándar abierto que ya usan Claude y otros asistentes para esto mismo.
+
+Le pasas el enlace del repositorio de esa herramienta y ATLAS la instala, confirma que arranca y aprende sola cómo usar cada una de sus funciones — no hace falta configurar nada a mano. Y cada servidor que agregas se ve y se activa o desactiva desde su propia pestaña.
+
+<p align="center">
+  <img src="docs/img/mcp.png" alt="Servidores MCP instalados, con su repositorio y un interruptor para activarlos" width="820">
+</p>
+
 ---
 
 ## Diagrama de Atlas
