@@ -167,11 +167,11 @@ Así se reparte cada mensaje entre las piezas de ATLAS, con **Conversacional** c
 
 ```mermaid
 flowchart TD
-    CONV{{"🧠 Conversacional<br/>el cerebro central"}}
+    CONV{{" Conversacional<br/>el cerebro central"}}
 
     %% CANALES DEL USUARIO (TÚ)
-    CONV <-->|"le hablas o escribes"| U1["🖥️ En el ordenador<br/>(voz o teclado)"]
-    CONV <-->|"control desde el móvil"| U2["📱 Chat propio 'Tú'<br/>(WhatsApp personal)"]
+    CONV <-->|"le hablas o escribes"| U1[" En el ordenador<br/>(voz o teclado)"]
+    CONV <-->|"control desde el móvil"| U2[" Chat propio 'Tú'<br/>(WhatsApp personal)"]
 
     %% AGENTES Y HERRAMIENTAS QUE ORQUESTA
     CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
@@ -190,8 +190,8 @@ flowchart TD
     %% SALIDAS DEL SISTEMA
     CONV --> SALIDA{"¿Se dice mejor hablado?"}
     WAAG --> SALIDA
-    SALIDA -->|"sí"| VOZ["🗣️ Voz de Atlas<br/>texto → voz, en tiempo real"]
-    SALIDA -->|"no"| TXT["💬 Respuesta escrita"]
+    SALIDA -->|"sí"| VOZ[" Voz de Atlas<br/>texto → voz, en tiempo real"]
+    SALIDA -->|"no"| TXT[" Respuesta escrita"]
 ```
 
 Dos detalles que no se ven a simple vista:
