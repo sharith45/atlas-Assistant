@@ -159,7 +159,7 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
   <img src="docs/img/pantalla_skill.png" alt="Habilidades instaladas: cada una con su instrucción propia, editable" width="820">
 </p>
 
-### Se conecta a herramientas externas (MCP)
+### MCP
 
 A veces lo que hace falta no es una instrucción nueva, sino un programa externo entero — simular una red en Cisco Packet Tracer, consultar una base de datos, lo que sea que hable **MCP (Model Context Protocol)**, el estándar abierto que ya usan Claude y otros asistentes para esto mismo.
 
@@ -177,31 +177,29 @@ Así se reparte cada mensaje entre las piezas de ATLAS, con **Conversacional** c
 
 ```mermaid
 flowchart TD
-    CONV{{" Conversacional<br/>el cerebro central"}}
+    CONV{{"Conversacional<br/>el cerebro central"}}
+    U1["Le hablas o le escribes desde el ordenador"] --> CONV
 
-    %% CANALES DEL USUARIO (TÚ)
-    CONV <-->|"le hablas o escribes"| U1[" En el ordenador<br/>(voz o teclado)"]
-    CONV <-->|"control desde el móvil"| U2[" Chat propio 'Tú'<br/>(WhatsApp personal)"]
-
-    %% AGENTES Y HERRAMIENTAS QUE ORQUESTA
-    CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
     CONV -->|"moverse por la web"| NAV["Navegación Gráfica"]
     CONV -->|"un dato de internet, ya"| BUS["Búsqueda Rápida"]
+    CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
     CONV <-->|"qué recordar, qué traer"| MEM["Memoria<br/>corto y largo plazo"]
 
     SIS -.->|"usa"| SKI["Skills instaladas"]
     SIS -.->|"usa"| MCP["Servidores MCP"]
 
-    %% ATENCIÓN EXTERNA DE CONTACTOS (AUTÓNOMA)
-    CONV <-->|"delega y comparte recados"| WAAG["Agente de Contactos<br/>WhatsApp, criterio propio"]
-    WAAG <-->|"atiende chats y llamadas"| W_EXT["Tus contactos de WhatsApp<br/>(mensajes y llamadas)"]
-    WAAG -.->|"transcribe voz y audios"| OIDO["Oído de Atlas<br/>voz → texto"]
+    U2["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
+    W2 -->|"sí"| OIDO["Oído de Atlas<br/>voz → texto"]
+    W2 -->|"no, ya es texto"| W3
+    OIDO --> W3{"¿Quién es?"}
+    LLAM["Alguien te llama por WhatsApp"] --> WAAG
+    W3 -->|"tú mismo, tu propio chat"| CONV
+    W3 -->|"un contacto tuyo"| WAAG["Agente de Contactos<br/>WhatsApp, criterio propio"]
 
-    %% SALIDAS DEL SISTEMA
     CONV --> SALIDA{"¿Se dice mejor hablado?"}
     WAAG --> SALIDA
-    SALIDA -->|"sí"| VOZ[" Voz de Atlas<br/>texto → voz, en tiempo real"]
-    SALIDA -->|"no"| TXT[" Respuesta escrita"]
+    SALIDA -->|"sí"| VOZ["Voz de Atlas<br/>texto → voz, en tiempo real"]
+    SALIDA -->|"no"| TXT["Respuesta escrita"]
 ```
 
 Dos detalles que no se ven a simple vista:
