@@ -178,7 +178,14 @@ Así se reparte cada mensaje entre las piezas de ATLAS, con **Conversacional** c
 ```mermaid
 flowchart TD
     CONV{{"Conversacional<br/>el cerebro central"}}
-    U1["Le hablas o le escribes desde el ordenador"] --> CONV
+    U1["Tú, hablando o escribiendo desde el ordenador"] --> CONV
+    U2["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
+    W2 -->|"sí"| OIDO["Oído de Atlas<br/>voz → texto"]
+    W2 -->|"no, ya es texto"| W3
+    OIDO --> W3{"¿Quién es?"}
+    LLAM["Alguien te llama"] --> WAAG
+    W3 -->|"tú mismo, tu propio chat"| CONV
+    W3 -->|"un contacto tuyo"| WAAG["Agente de Contactos<br/>criterio propio, aparte del Conversacional"]
 
     CONV -->|"moverse por la web"| NAV["Navegación Gráfica"]
     CONV -->|"un dato de internet, ya"| BUS["Búsqueda Rápida"]
@@ -187,14 +194,6 @@ flowchart TD
 
     SIS -.->|"usa"| SKI["Skills instaladas"]
     SIS -.->|"usa"| MCP["Servidores MCP"]
-
-    U2["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
-    W2 -->|"sí"| OIDO["Oído de Atlas<br/>voz → texto"]
-    W2 -->|"no, ya es texto"| W3
-    OIDO --> W3{"¿Quién es?"}
-    LLAM["Alguien te llama por WhatsApp"] --> WAAG
-    W3 -->|"tú mismo, tu propio chat"| CONV
-    W3 -->|"un contacto tuyo"| WAAG["Agente de Contactos<br/>WhatsApp, criterio propio"]
 
     CONV --> SALIDA{"¿Se dice mejor hablado?"}
     WAAG --> SALIDA
