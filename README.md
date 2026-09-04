@@ -163,34 +163,35 @@ ATLAS aprende cosas nuevas sin recompilar nada. Las **skills** son instrucciones
 
 ## Diagrama de Atlas
 
-Así se reparte cada mensaje entre las piezas de ATLAS, sea que llegue
-hablando frente al ordenador o escribiendo por WhatsApp.
+Así se reparte cada mensaje entre las piezas de ATLAS, con **Conversacional** como núcleo central que orquesta tanto tu interacción directa como el trabajo de fondo y la atención telefónica.
 
 ```mermaid
 flowchart TD
-    CONV{{"Conversacional<br/>el cerebro central"}}
-    U1["Le hablas o le escribes desde el ordenador"] --> CONV
+    CONV{{" Conversacional<br/>el cerebro central"}}
 
+    %% CANALES DEL USUARIO (TÚ)
+    CONV <-->|"le hablas o escribes"| U1[" En el ordenador<br/>(voz o teclado)"]
+    CONV <-->|"control desde el móvil"| U2[" Chat propio 'Tú'<br/>(WhatsApp personal)"]
+
+    %% AGENTES Y HERRAMIENTAS QUE ORQUESTA
+    CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
     CONV -->|"moverse por la web"| NAV["Navegación Gráfica"]
     CONV -->|"un dato de internet, ya"| BUS["Búsqueda Rápida"]
-    CONV -->|"programar o tocar el PC"| SIS["Agente de Sistema"]
     CONV <-->|"qué recordar, qué traer"| MEM["Memoria<br/>corto y largo plazo"]
 
     SIS -.->|"usa"| SKI["Skills instaladas"]
     SIS -.->|"usa"| MCP["Servidores MCP"]
 
-    U2["Te escriben por WhatsApp"] --> W2{"¿Llegó en audio?"}
-    W2 -->|"sí"| OIDO["Oído de Atlas<br/>voz → texto"]
-    W2 -->|"no, ya es texto"| W3
-    OIDO --> W3{"¿Quién es?"}
-    LLAM["Alguien te llama por WhatsApp"] --> WAAG
-    W3 -->|"tú mismo, tu propio chat"| CONV
-    W3 -->|"un contacto tuyo"| WAAG["Agente de Contactos<br/>WhatsApp, criterio propio"]
+    %% ATENCIÓN EXTERNA DE CONTACTOS (AUTÓNOMA)
+    CONV <-->|"delega y comparte recados"| WAAG["Agente de Contactos<br/>WhatsApp, criterio propio"]
+    WAAG <-->|"atiende chats y llamadas"| W_EXT["Tus contactos de WhatsApp<br/>(mensajes y llamadas)"]
+    WAAG -.->|"transcribe voz y audios"| OIDO["Oído de Atlas<br/>voz → texto"]
 
+    %% SALIDAS DEL SISTEMA
     CONV --> SALIDA{"¿Se dice mejor hablado?"}
     WAAG --> SALIDA
-    SALIDA -->|"sí"| VOZ["Voz de Atlas<br/>texto → voz, en tiempo real"]
-    SALIDA -->|"no"| TXT["Respuesta escrita"]
+    SALIDA -->|"sí"| VOZ[" Voz de Atlas<br/>texto → voz, en tiempo real"]
+    SALIDA -->|"no"| TXT[" Respuesta escrita"]
 ```
 
 Dos detalles que no se ven a simple vista:
